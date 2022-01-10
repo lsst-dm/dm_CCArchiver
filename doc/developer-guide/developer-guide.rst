@@ -190,14 +190,11 @@ Dependencies
 
 [This section should list dependencies in bullet form]
 
-* `SAL <https://ts-sal.lsst.io>`_ - 4.1.4
-* ts_salobj - 5.17.0
-* ts_idl - 1.3.0
-* ts_xml - 6.1.0
-* OpenSplice - OpenSpliceDDS-6.9.0-8
-* DDS - v6.9.190925_7
-* dm_csc_base - 2.2.0
-* dm_CCarchiver - 1.2.0
+* cycle_tag - c0023
+* ts_ddsconfig - v0.9.0
+* OpenSplice DDS - V6.10.4
+* dm_csc_base - 4.2.0
+* dm_CCarchiver - 3.1.0
 * pika - 1.1.0
 * redis - 3.5.3
 
