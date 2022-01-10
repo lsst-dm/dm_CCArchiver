@@ -56,10 +56,6 @@ CCArchiver
 .. image:: https://img.shields.io/badge/ts_xml-dm_CCArchiver-green.svg
     :target: https://ts-xml.lsst.io/sal_interfaces/CCArchiver.html
 
-.. Warning::
-
-   **This CSC documentation is under development and not ready for active use.**
-
 .. _Overview:
 
 Overview
