@@ -10,7 +10,7 @@ CCArchiver Developer Guide
 .. image:: https://img.shields.io/badge/Jenkins-dm_CCArchiver-green.svg
     :target: https://tssw-ci.lsst.org/job/LSST_Telescope-and-Site/job/dm_CCArchiver/
 .. image:: https://img.shields.io/badge/Jira-dm_CCArchiver-green.svg
-    :target: https://jira.lsstcorp.org/issues/?jql=labels+%3D+dm_CCArchiver
+    :target: https://jira.lsstcorp.org/issues/?jql=text%20~%20%22CCArchiver%22
 .. image:: https://img.shields.io/badge/ts_xml-CCArchiver-green.svg
     :target: https://ts-xml.lsst.io/sal_interfaces/CCArchiver.html
 

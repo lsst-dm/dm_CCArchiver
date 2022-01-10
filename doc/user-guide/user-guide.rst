@@ -46,13 +46,13 @@ CCArchiver User Guide
 
 .. Update links and labels below
 .. image:: https://img.shields.io/badge/GitHub-dm_ccarchiver-green.svg
-    :target: https://github.com/lsst-dm/dm_CCArchiver
+   :target: https://github.com/lsst-dm/dm_CCArchiver
 .. image:: https://img.shields.io/badge/Jenkins-dm_CCArchiver-green.svg
-       :target: https://tssw-ci.lsst.org/job/LSST_Telescope-and-Site/job/dm_CCArchiver/
+   :target: https://tssw-ci.lsst.org/job/LSST_Telescope-and-Site/job/dm_CCArchiver/
 .. image:: https://img.shields.io/badge/Jira-dm_ccarchiver-green.svg
-    :target: https://jira.lsstcorp.org/issues/?jql=labels+%3D+dm_ccarchiver
+   :target: https://jira.lsstcorp.org/issues/?jql=text%20~%20%22CCArchiver%22
 .. image:: https://img.shields.io/badge/ts_xml-CCArchiver-green.svg
-    :target: https://ts-xml.lsst.io/sal_interfaces/CCArchiver.html
+   :target: https://ts-xml.lsst.io/sal_interfaces/CCArchiver.html
 
 
 The Archiver interacts with the Archive Controller and the Forwarder to 
