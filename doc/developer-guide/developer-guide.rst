@@ -21,10 +21,10 @@ Introduction
 The primary services that the CCArchiver interacts with are the Forwarder 
 (dm_Forwarder) and the ComCam Controller.  The Forwarder retrieves and assembles
 images. The ComCam Controller presents where files should be deposited and
-stages files where the `Data Backbone https://dmtn-122.lsst.io` (DBB) and 
-the ComCam `Observatory Operations Data Service https://github.com/lsst-dm/ctrl_oods` (OODS) can act on them.  These services communicate
-to each other using RabbitMQ.  A Redis database is also used to advertise
-service availablity and service health.
+stages files where the `Data Backbone <https://dmtn-122.lsst.io>` (DBB) and 
+the ComCam `Observatory Operations Data Service <https://github.com/lsst-dm/ctrl_oods>` (OODS)
+can act on them.  These services communicate to each other using RabbitMQ.  A Redis
+database is also used to advertise service availablity and service health.
 
 The archiver begins in the STANDBY state. When it receives a START command,
 it transitions to the DISABLED state.  This causes the CCArchiver to attempt
