@@ -37,17 +37,17 @@ class CCArchiverCSC(ArchiverCSC):
     index : `str`
     """
 
-    def __init__(self, index):
-        super().__init__("CCArchiver", index=index, initial_state=salobj.State.STANDBY)
+    def __init__(self):
+        super().__init__("CCArchiver", initial_state=salobj.State.STANDBY)
 
         domain = salobj.Domain()
 
         # set up receiving SAL messages
-        salobj.SalInfo(domain=domain, name="CCArchiver", index=index)
+        salobj.SalInfo(domain=domain, name="CCArchiver")
 
         # receive events from CCCamera
         camera_events = {'endReadout', 'startIntegration'}
-        self.camera_remote = salobj.Remote(domain, "CCCamera", index=index, readonly=True, include=camera_events,
+        self.camera_remote = salobj.Remote(domain, "CCCamera", readonly=True, include=camera_events,
                                            evt_max_history=0)
         self.camera_remote.evt_endReadout.callback = self.endReadoutCallback
         self.camera_remote.evt_startIntegration.callback = self.startIntegrationCallback
@@ -55,7 +55,7 @@ class CCArchiverCSC(ArchiverCSC):
         # receive events from CCHeaderService
         cchs_events = {'largeFileObjectAvailable'}
         self.cchs_remote = salobj.Remote(domain, "CCHeaderService",
-                                         index=index, readonly=True, include=cchs_events,
+                                         readonly=True, include=cchs_events,
                                          evt_max_history=0)
         self.cchs_remote.evt_largeFileObjectAvailable.callback = self.largeFileObjectAvailableCallback
 
