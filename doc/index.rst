@@ -37,8 +37,8 @@
 
 .. Fill out data so contacts section below is auto-populated
 .. add name and email between the *'s below e.g. *Marie Smith <msmith@lsst.org>*
-.. |CSC_developer| replace::  *Replace-with-name-and-email*
-.. |CSC_product_owner| replace:: *Replace-with-name-and-email*
+.. |CSC_developer| replace::  *Stephen R Pietrowicz <srp@illinois.edu>*
+.. |CSC_product_owner| replace:: *Michael Reuter <mareuter@lsst.org>*
 
 .. Note that the "ts_" prefix is omitted from the title
 
@@ -48,28 +48,32 @@ CCArchiver
 
 .. update the following links to point to your CSC (rather than the athexapod)
 .. image:: https://img.shields.io/badge/GitHub-dm_CCArchiver-green.svg
-    :target: https://github.com/lsst-ts/dm_CCArchiver
+    :target: https://github.com/lsst-dm/dm_CCArchiver
 .. image:: https://img.shields.io/badge/Jenkins-dm_CCArchiver-green.svg
     :target: https://tssw-ci.lsst.org/job/LSST_Telescope-and-Site/job/dm_CCArchiver/
 .. image:: https://img.shields.io/badge/Jira-dm_CCArchiver-green.svg
     :target: https://jira.lsstcorp.org/issues/?jql=labels+%3D+dm_CCArchiver
-.. image:: https://img.shields.io/badge/ts_xml-{cookiecutter.csc_name}}-green.svg
+.. image:: https://img.shields.io/badge/ts_xml-dm_CCArchiver-green.svg
     :target: https://ts-xml.lsst.io/sal_interfaces/CCArchiver.html
-
-.. TODO: Delete the note when the page becomes populated
-
-.. Warning::
-
-   **This CSC documentation is under development and not ready for active use.**
 
 .. _Overview:
 
 Overview
 ========
 
-[This section is to present an overview of the CSC.
-This should include a top-level description of the primary use-case(s) as well as any pertinent information.
-Example information may be link(s) to the higher-level classes which may be used to operate it, or mention of other CSCs (with links) that it operates in concert with.]
+The Data Management CCArchiver coordinates Commissioning Camera 
+archiving activities for the Vera C. Rubin Observatory.  This service 
+interacts with other services coordinate retrieval and archival of
+image data from the ComCam data acquisition system.
+
+The primary services that the CCArchiver interacts with are the Forwarder
+and the ComCam Controller.  The Forwarder retrieves and assembles
+images. The ComCam Controller presents where files should be deposited and
+stages files where the `Data Backbone https://dmtn-122.lsst.io` (DBB) and
+the ComCam `Observatory Operations Data Service https://github.com/lsst-dm/ctrl_oods` (OODS) can act on them. 
+
+The user does not directly interact with this CSC, but instead listens for
+events indicating image ingestion into the OODS.
 
 .. note:: If you are interested in viewing other branches of this repository append a `/v` to the end of the url link. For example `https://ts-xml.lsst.io/v/`
 
